@@ -1,7 +1,7 @@
 <template>
   <div class="mirror-list">
     <a-row :gutter="32" v-if="choice==1">
-      <a-col v-for="item in mirrorDataFilter" :key="item.value" :xs="24" :lg="12">
+      <a-col v-for="item in mirrorDataFilter" :key="item.name" :xs="24" :lg="12">
         <div class="mirror-card">
           <MirrorCard
             class="mirror-card"
@@ -15,7 +15,7 @@
       </a-col>
     </a-row>
     <a-row :gutter="32" v-else>
-      <a-col v-for="item in proxyData" :key="item.value" :xs="24" :lg="12">
+      <a-col v-for="item in proxyData" :key="item.name" :xs="24" :lg="12">
         <div class="mirror-card">
           <MirrorCard
             class="mirror-card"
